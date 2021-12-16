@@ -1,0 +1,14 @@
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+    font-size: 18px;
+}
+.navbar-dark .navbar-brand {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.text-highlight {
+    /* color: #0DCAF0; */
+    color:#FF2F81;
+}
