@@ -10,7 +10,6 @@ const Banner = () => {
     const particlesInit = (main) => {
         console.log(main);
     };
-
     const particlesLoaded = (container) => {
         console.log(container);
     };
@@ -87,7 +86,7 @@ const Banner = () => {
                         },
                         size: {
                             random: true,
-                            value: 5,
+                            value: 4,
                         },
                     },
                     detectRetina: true,

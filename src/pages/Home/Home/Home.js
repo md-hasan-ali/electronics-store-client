@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../../Sheard/Footer/Footer';
 import Navigation from '../../Sheard/Navigation/Navigation';
 import Banner from '../Banner/Banner';
 import Products from '../Products/Products';
@@ -9,6 +10,7 @@ const Home = () => {
             <Navigation></Navigation>
             <Banner></Banner>
             <Products></Products>
+            <Footer></Footer>
         </div>
     );
 };
