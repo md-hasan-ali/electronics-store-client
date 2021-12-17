@@ -21,11 +21,12 @@
     z-index: -1;
 }
 .banner-content {
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50% , -50%);
-    text-align: left;
+    text-align: left; */
+    padding-top: 110px;
 }
 .banner-content h1 {
     font-size: 60px;
@@ -66,13 +67,13 @@
     background-color: #FF2F81;
 }
 
-.image-caption {
+/* .image-caption {
     position: absolute;
     top: 0;
     right: 0;
-}
+} */
 .image-caption img {
-    width: 50%;
+    width: 80%;
 }
 .image-caption2 {
     position: absolute;

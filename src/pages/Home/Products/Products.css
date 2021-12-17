@@ -25,3 +25,7 @@
 .card:hover {
     box-shadow: 6px 6px 16px;
 }
+p.price {
+    color: #FF2F81;
+    font-size: 24px;
+}

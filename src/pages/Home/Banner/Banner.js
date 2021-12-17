@@ -86,15 +86,15 @@ const Banner = () => {
                         },
                         size: {
                             random: true,
-                            value: 4,
+                            value: 3,
                         },
                     },
                     detectRetina: true,
                 }}
             />
             <Container>
-                <Row>
-                    <Col>
+                <Row className='align-items-center'>
+                    <Col xs={12} md={7}>
                         <div className="banner-content">
                             <h1>This is our <span className='text-highlight'>Electronics </span>Store</h1>
                             <p style={{ marginBottom: '20px' }}>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before the final </p>
@@ -102,11 +102,14 @@ const Banner = () => {
                             <button className='border-button'>Contact Us</button>
                         </div>
                     </Col>
+                    <Col xs={12} md={5}>
+                        <div className="image-caption text-center">
+                            <img src={iphone} alt="" />
+                        </div>
+                    </Col>
                 </Row>
             </Container>
-            <div className="image-caption">
-                <img src={iphone} alt="" />
-            </div>
+
             {/* <div className="image-caption2">
                 <img src={laptop} alt="" />
             </div> */}
