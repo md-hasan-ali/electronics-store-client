@@ -66,20 +66,26 @@
     background:none;
     background-color: #FF2F81;
 }
-
-/* .image-caption {
+.image-caption {
+    margin-top: 20px;
     position: absolute;
-    top: 0;
-    right: 0;
-} */
+    animation: imageToggle 4s infinite ease-out;
+}
+
 .image-caption img {
     width: 80%;
+    position: relative;
 }
-.image-caption2 {
-    position: absolute;
-    top: 25px;
-    left: 0;
-}
-.image-caption2 img {
-    width: 315px;
+
+
+@keyframes imageToggle {
+    0% {
+        top:0px;
+    }
+    50% {
+        top:80px;
+    }
+    100% {
+        top:0px;
+    }
 }

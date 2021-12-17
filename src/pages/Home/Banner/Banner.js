@@ -80,10 +80,10 @@ const Banner = () => {
                             value: 100,
                         },
                         opacity: {
-                            value: 0.5,
+                            value: 1,
                         },
                         shape: {
-                            type: "star",
+                            type: "circle",
                         },
                         size: {
                             random: true,

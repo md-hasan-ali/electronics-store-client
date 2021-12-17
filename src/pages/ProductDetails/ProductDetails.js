@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Card, Col, Container, Row } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import Footer from '../Sheard/Footer/Footer';
 import Navigation from '../Sheard/Navigation/Navigation';
 import { useForm } from "react-hook-form";
@@ -8,6 +8,7 @@ import './ProductDetails.css';
 
 const ProductDetails = () => {
     const { id } = useParams();
+    const navigate = useNavigate();
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const [productDetail, setProductDetail] = useState();
@@ -18,7 +19,21 @@ const ProductDetails = () => {
     }, [id]);
 
     const onSubmit = data => {
-        console.log(data)
+        fetch('http://localhost:5000/orders', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.insertedId) {
+                    alert('Order Confirm Successfully..');
+                }
+                navigate('/');
+            })
+
     };
 
     return (
@@ -57,7 +72,7 @@ const ProductDetails = () => {
 
                                 <textarea placeholder='Address' style={{ height: '120px' }} {...register("address")} required />
 
-                                <input className='box-button1 order-button' type="submit" />
+                                <button className='box-button1 order-button' type="Submit">Place Order</button>
                             </form>
                         </div>
                     </Col>

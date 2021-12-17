@@ -13,6 +13,9 @@ const Navigation = () => {
                     <Nav.Link as={Link} to="/aboutUs">About Us</Nav.Link>
                     <Nav.Link as={Link} to="/allProducts">All Products</Nav.Link>
                     <Nav.Link as={Link} to="/Contact">Contact Us</Nav.Link>
+
+                    <Nav.Link as={Link} to="/login" className='login-button'>Login</Nav.Link>
+
                 </Nav>
             </Container>
         </Navbar>
