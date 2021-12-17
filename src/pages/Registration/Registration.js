@@ -41,9 +41,9 @@ const Registration = () => {
                                 onChange={handleOnchange}
                             />
                             <input
-                                placeholder='Your Password'
+                                placeholder='Confirm Password'
                                 type="password"
-                                name="password"
+                                name="Confirm_Password"
                                 onChange={handleOnchange}
                             />
                             <button
