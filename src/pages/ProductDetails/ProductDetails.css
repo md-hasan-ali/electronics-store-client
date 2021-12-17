@@ -1,0 +1,12 @@
+form input,textarea {
+    width: 90%;
+    margin-bottom: 12px;
+    padding: 10px;
+    border: 2px solid gray;
+}
+.order-button {
+    width: 30%;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 500;
+}

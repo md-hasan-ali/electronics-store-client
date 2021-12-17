@@ -1,5 +1,6 @@
 // add necessary file 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './footer.css'
 
 // Footer component 
@@ -18,9 +19,9 @@ const Footer = () => {
                         <div className="social-icon">
                             <h2>About Us</h2>
                             <p>definitions of cars say that they run primarily on roads, seat one-to-eight people, have four wheels and mainly transport people rather than goods</p>
-                            <a href='/about'>
+                            <Link to='/aboutUs'>
                                 <button className='box-button1'>About Us</button>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     <div className="col-md-4">

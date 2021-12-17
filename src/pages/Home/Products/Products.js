@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Card, Col, Container, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './Products.css';
 
 const Products = () => {
@@ -33,7 +34,9 @@ const Products = () => {
                                         </Card.Text>
                                     </Card.Body>
                                     <Card.Footer>
-                                        <button className='box-button1'>Purchase Now</button>
+                                        <Link to={`product/${product._id}`}>
+                                            <button className='box-button1'>Purchase Now</button>
+                                        </Link>
                                     </Card.Footer>
                                 </Card>
                             </Col>

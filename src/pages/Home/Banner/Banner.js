@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import Particles from "react-tsparticles";
 import iphone from '../../../images/iphone.png';
 // import laptop from '../../../images/mac-laptop-removebg-preview.png'
@@ -98,8 +99,12 @@ const Banner = () => {
                         <div className="banner-content">
                             <h1>This is our <span className='text-highlight'>Electronics </span>Store</h1>
                             <p style={{ marginBottom: '20px' }}>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before the final </p>
-                            <button className='box-button'>About Us</button>
-                            <button className='border-button'>Contact Us</button>
+                            <Link to='/aboutUs'>
+                                <button className='box-button'>About Us</button>
+                            </Link>
+                            <Link to='/Contact'>
+                                <button className='border-button'>Contact Us</button>
+                            </Link>
                         </div>
                     </Col>
                     <Col xs={12} md={5}>
