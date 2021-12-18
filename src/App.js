@@ -13,6 +13,13 @@ import ProductDetails from './pages/ProductDetails/ProductDetails';
 import Login from './pages/Login/Login';
 import Registration from './pages/Registration/Registration';
 import AuthProvider from './Contexts/AuthProvider/AuthProvider';
+import DashboardHome from './pages/Dashboard/DashboardHome/DashboardHome';
+import ManageAllOrder from './pages/Dashboard/ManageAllOrder/ManageAllOrder';
+import AddProduct from './pages/Dashboard/AddProduct/AddProduct';
+import MakeAdmin from './pages/Dashboard/MakeAdmin/MakeAdmin';
+import ManageProduct from './pages/Dashboard/ManageProduct/ManageProduct';
+import Payment from './pages/Dashboard/Payment/Payment';
+import MyOrders from './pages/Dashboard/MyOrders/MyOrders';
 
 function App() {
   return (
@@ -40,6 +47,15 @@ function App() {
             </Route>
 
             <Route path='product/:id' element={<ProductDetails></ProductDetails>}>
+            </Route>
+            {/* Dashboard and nested Route*/}
+            <Route path='dashboard' element={<DashboardHome></DashboardHome>}>
+              <Route path='manageAllOrder' element={<ManageAllOrder></ManageAllOrder>}></Route>
+              <Route path='addProduct' element={<AddProduct></AddProduct>}></Route>
+              <Route path='makeAdmin' element={<MakeAdmin></MakeAdmin>}></Route>
+              <Route path='manageProduct' element={<ManageProduct></ManageProduct>}></Route>
+              <Route path='myOrders' element={<MyOrders></MyOrders>}></Route>
+              <Route path='payment' element={<Payment></Payment>}></Route>
             </Route>
 
           </Routes>

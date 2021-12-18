@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Alert, Col, Container, Row, Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 import Footer from '../Sheard/Footer/Footer';
 import Navigation from '../Sheard/Navigation/Navigation';
 
 const Registration = () => {
     const [loginData, setLoginData] = useState({});
+    const { registerUser, isLoadding, user } = useAuth();
 
     const handleOnchange = (e) => {
         const field = e.target.name;
@@ -15,7 +17,10 @@ const Registration = () => {
         setLoginData(newLoginData);
     }
     const handleSubmit = (e) => {
-        console.log(loginData);
+        if (loginData.password !== loginData.confirm_password) {
+            alert('Your Password is did not match');
+        }
+        registerUser(loginData.email, loginData.password);
         e.preventDefault();
     }
     return (
@@ -27,24 +32,27 @@ const Registration = () => {
                 </div>
                 <Row>
                     <Col xs={12} md={6} className='mx-auto'>
-                        <form className='login-form' onSubmit={handleSubmit}>
+                        {!isLoadding && <form className='login-form' onSubmit={handleSubmit}>
                             <input
                                 placeholder='Your Email'
                                 type="email"
                                 name="email"
+                                required
                                 onChange={handleOnchange}
                             />
                             <input
                                 placeholder='Your Password'
                                 type="password"
                                 name="password"
+                                required
                                 onChange={handleOnchange}
                             />
                             <input
                                 placeholder='Confirm Password'
                                 type="password"
-                                name="Confirm_Password"
+                                name="confirm_password"
                                 onChange={handleOnchange}
+                                required
                             />
                             <button
                                 className='box-button1'
@@ -55,7 +63,22 @@ const Registration = () => {
                             <Link to='/login' style={{ textDecoration: 'none' }}>
                                 <button className='text-button'>Already Registerd? Please Login.</button>
                             </Link>
-                        </form>
+                        </form>}
+                        {
+                            isLoadding &&
+                            <div className='text-center'>
+                                <Spinner animation="border" variant="danger" />
+                            </div>
+                        }
+                        {
+                            user?.email && [
+                                'success',
+                            ].map((variant, idx) => (
+                                <Alert className='mt-4' key={idx} variant={variant}>
+                                    User Account Created Successfully.
+                                </Alert>
+                            ))
+                        }
                     </Col>
                 </Row>
             </Container>
