@@ -18,7 +18,7 @@ const Navigation = () => {
                     <Nav.Link className='box-button1 ms-3' as={Link} to="/dashboard">Dashboard</Nav.Link>
 
                     {
-                        user?.email ? <Nav.Link onClick={Logout} className='login-button'>Logout</Nav.Link>
+                        user?.email ? <Nav.Link onClick={Logout} className='box-button1'>Logout</Nav.Link>
                             :
                             <Nav.Link as={Link} to="/login" className='box-button1'>Login</Nav.Link>
                     }
