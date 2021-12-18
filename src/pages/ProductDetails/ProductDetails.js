@@ -34,7 +34,7 @@ const ProductDetails = () => {
                 if (data.insertedId) {
                     alert('Order Confirm Successfully..');
                 }
-                navigate('/');
+                navigate('/dashboard/myOrders');
             })
 
     };
@@ -49,7 +49,7 @@ const ProductDetails = () => {
                 <Row className="g-4">
                     <Col xs={12} md={6}>
                         <Card>
-                            <Card.Img variant="top" src={productDetail?.img} />
+                            <Card.Img style={{ height: "100%" }} variant="top" src={productDetail?.img} />
                             <Card.Body>
                                 <Card.Title><strong>Name: </strong>{productDetail?.name} </Card.Title>
                                 <Card.Text>
