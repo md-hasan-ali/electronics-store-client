@@ -17,24 +17,24 @@ const DashboardHome = () => {
                     <div className="col-md-3 m-0 p-0">
                         <div className="dashboard-menu">
                             <Link style={{ textDecoration: 'none' }} to='manageAllOrder'>
-                                <button>Manage All Order</button>
+                                <button><i className="fas fa-archive pe-2"></i> Manage All Order</button>
                             </Link>
                             <Link style={{ textDecoration: 'none' }} to='addProduct'>
-                                <button>Add New Product</button>
+                                <button> <i className="far fa-plus-square pe-2"></i> Add New Product</button>
                             </Link>
                             <Link style={{ textDecoration: 'none' }} to='makeAdmin'>
-                                <button>Make Admin</button>
+                                <button><i className="fas fa-tasks pe-2"></i> Make Admin</button>
                             </Link>
                             <Link style={{ textDecoration: 'none' }} to='manageProduct'>
-                                <button>Manage All Product</button>
+                                <button><i className="fas fa-people-arrows pe-2"></i> Manage All Product</button>
                             </Link>
 
                             <Link style={{ textDecoration: 'none' }} to='myOrders'>
-                                <button>My Orders</button>
+                                <button> <i className="fas fa-book-reader"></i> My Orders</button>
                             </Link>
 
                             <Link style={{ textDecoration: 'none' }} to='payment'>
-                                <button>Pay</button>
+                                <button><i className="fab fa-amazon-pay"></i> Pay</button>
                             </Link>
 
                         </div>

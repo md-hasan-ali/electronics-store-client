@@ -10,7 +10,7 @@
     margin-right: 15px;
 }
 .dashboard-menu {
-    background: #d63384;
+    background:linear-gradient(#d63384,#FF2F81) ;
     height: 100vh;
     position: fixed;
     width: 22%;
@@ -22,7 +22,7 @@
     border: 0;
     display: block;
     color: #fff;
-    font-size: 20px;
+    font-size: 18px;
     text-transform: capitalize;
     font-weight: 600;
     margin-bottom: 10px;

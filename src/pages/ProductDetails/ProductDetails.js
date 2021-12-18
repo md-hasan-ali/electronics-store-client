@@ -5,8 +5,10 @@ import Footer from '../Sheard/Footer/Footer';
 import Navigation from '../Sheard/Navigation/Navigation';
 import { useForm } from "react-hook-form";
 import './ProductDetails.css';
+import useAuth from '../../hooks/useAuth';
 
 const ProductDetails = () => {
+    const { user } = useAuth();
     const { id } = useParams();
     const navigate = useNavigate();
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -19,6 +21,7 @@ const ProductDetails = () => {
     }, [id]);
 
     const onSubmit = data => {
+        data.status = 'pending';
         fetch('http://localhost:5000/orders', {
             method: 'POST',
             headers: {
@@ -63,7 +66,7 @@ const ProductDetails = () => {
                             <form onSubmit={handleSubmit(onSubmit)}>
                                 <input placeholder="User Name" {...register("User_name")} required />
 
-                                <input placeholder="User Email" {...register("Email_Name", { required: true })} required />
+                                <input defaultValue={user?.email} {...register("Email_Name", { required: true })} required />
 
                                 <input placeholder="Product Name" {...register("Product_Name", { required: true })} required />
 
