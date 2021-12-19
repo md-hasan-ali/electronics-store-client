@@ -50,7 +50,7 @@ const ManageAllOrder = () => {
     return (
         <div>
             <div className='text-center py-4'>
-                <h2>Manage All Orders</h2>
+                <h2 className='pb-4'>Manage <span className='text-highlight'>All Orders</span></h2>
                 <Table striped bordered hover variant="dark">
                     <thead>
                         <tr>

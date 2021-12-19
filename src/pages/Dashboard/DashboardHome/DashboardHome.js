@@ -22,9 +22,9 @@ const DashboardHome = () => {
                             <Link style={{ textDecoration: 'none' }} to='addProduct'>
                                 <button> <i className="far fa-plus-square pe-2"></i> Add New Product</button>
                             </Link>
-                            <Link style={{ textDecoration: 'none' }} to='makeAdmin'>
+                            {/* <Link style={{ textDecoration: 'none' }} to='makeAdmin'>
                                 <button><i className="fas fa-tasks pe-2"></i> Make Admin</button>
-                            </Link>
+                            </Link> */}
                             <Link style={{ textDecoration: 'none' }} to='manageProduct'>
                                 <button><i className="fas fa-people-arrows pe-2"></i> Manage All Product</button>
                             </Link>

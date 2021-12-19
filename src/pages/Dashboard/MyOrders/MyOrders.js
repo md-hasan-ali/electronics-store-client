@@ -36,7 +36,7 @@ const MyOrders = () => {
     return (
         <div>
             <div>
-                <h2 className='text-center py-4 text-danger'>My Orders</h2>
+                <h2 className='text-center py-4'>My <span className='text-highlight'>Orders</span></h2>
                 <Table striped bordered hover variant="dark">
                     <thead>
                         <tr>

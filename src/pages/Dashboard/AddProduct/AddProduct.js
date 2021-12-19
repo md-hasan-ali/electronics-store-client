@@ -27,7 +27,7 @@ const AddProduct = () => {
     return (
         <div>
             <div>
-                <h2 className='text-center py-4 text-success'>Add a New Product</h2>
+                <h2 className='text-center py-4'>Add a <span className='text-highlight'>New Product</span></h2>
                 <div className="container">
                     <div className="row">
                         <div className="col-md-10 mx-auto">
