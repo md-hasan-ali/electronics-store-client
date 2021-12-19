@@ -9,7 +9,7 @@ const AddProduct = () => {
         handleSubmit,
     } = useForm();
     const onSubmit = (data) => {
-        fetch('http://localhost:5000/addNewProduct', {
+        fetch('https://floating-atoll-84142.herokuapp.com/addNewProduct', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

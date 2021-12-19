@@ -6,7 +6,7 @@ const ManageAllOrder = () => {
     const [deletedCount, setDeletedCount] = useState(null)
 
     useEffect(() => {
-        fetch('http://localhost:5000/manageOrders')
+        fetch('https://floating-atoll-84142.herokuapp.com/manageOrders')
             .then(res => res.json())
             .then(data => setManageOrders(data))
     }, [deletedCount])
@@ -15,7 +15,7 @@ const ManageAllOrder = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Are You sure,You want to delete?');
         if (proceed) {
-            fetch(`http://localhost:5000/singleOrder/${id}`, {
+            fetch(`https://floating-atoll-84142.herokuapp.com/singleOrder/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'content-type': 'application/json'
@@ -33,7 +33,7 @@ const ManageAllOrder = () => {
     }
 
     const handleUpdate = (id) => {
-        fetch(`http://localhost:5000/updateStatus/${id}`, {
+        fetch(`https://floating-atoll-84142.herokuapp.com/updateStatus/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

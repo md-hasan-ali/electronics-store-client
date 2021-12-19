@@ -7,7 +7,7 @@ const MyOrders = () => {
     const [orders, setOrders] = useState([]);
     const [deletedCount, setDeletedCount] = useState(null)
     useEffect(() => {
-        fetch(`http://localhost:5000/orders?email=${user.email}`)
+        fetch(`https://floating-atoll-84142.herokuapp.com/orders?email=${user.email}`)
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [deletedCount, user.email])
@@ -17,7 +17,7 @@ const MyOrders = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Are You sure,You want to delete?');
         if (proceed) {
-            fetch(`http://localhost:5000/orders?email=${user.email}&id=${id}`, {
+            fetch(`https://floating-atoll-84142.herokuapp.com/orders?email=${user.email}&id=${id}`, {
                 method: 'DELETE',
                 headers: {
                     'content-type': 'application/josn'

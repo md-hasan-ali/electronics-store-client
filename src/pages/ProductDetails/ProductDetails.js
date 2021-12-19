@@ -15,14 +15,14 @@ const ProductDetails = () => {
 
     const [productDetail, setProductDetail] = useState();
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${id}`)
+        fetch(`https://floating-atoll-84142.herokuapp.com/products/${id}`)
             .then(res => res.json())
             .then(data => setProductDetail(data[0]))
     }, [id]);
 
     const onSubmit = data => {
         data.status = 'pending';
-        fetch('http://localhost:5000/orders', {
+        fetch('https://floating-atoll-84142.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

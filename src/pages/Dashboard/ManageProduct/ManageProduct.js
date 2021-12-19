@@ -7,7 +7,7 @@ const ManageProduct = () => {
     const [deletedCount, setDeletedCount] = useState(null);
 
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://floating-atoll-84142.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [deletedCount])
@@ -15,7 +15,7 @@ const ManageProduct = () => {
     const handeDeleteProduct = (id) => {
         const proced = window.confirm('Are You sure, You want to delete the product.')
         if (proced) {
-            fetch(`http://localhost:5000/deleteSingleProduct/${id}`, {
+            fetch(`https://floating-atoll-84142.herokuapp.com/deleteSingleProduct/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'content-type': 'application/json',
