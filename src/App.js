@@ -20,6 +20,9 @@ import MakeAdmin from './pages/Dashboard/MakeAdmin/MakeAdmin';
 import ManageProduct from './pages/Dashboard/ManageProduct/ManageProduct';
 import Payment from './pages/Dashboard/Payment/Payment';
 import MyOrders from './pages/Dashboard/MyOrders/MyOrders';
+import Phone from './pages/Home/NewProducts/Phone/Phone';
+import Laptop from './pages/Home/NewProducts/Laptop/Laptop';
+import Mirophone from './pages/Home/NewProducts/Mircophone/Mirophone';
 
 function App() {
   return (
@@ -29,6 +32,9 @@ function App() {
           <Routes>
 
             <Route path='/' element={<Home></Home>}>
+              <Route path='phone' element={<Phone></Phone>}></Route>
+              <Route path='laptop' element={<Laptop></Laptop>}></Route>
+              <Route path='microphone' element={<Mirophone></Mirophone>}></Route>
             </Route>
 
             <Route path='aboutUs' element={<About></About>}>
